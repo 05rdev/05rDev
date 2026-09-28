@@ -104,7 +104,7 @@ identity:
 <div align="center">
 
   <a href="https://github.com/05rdev">
-    <img src="https://res.cloudinary.com/onquu3vo/image/upload/v1790443065/activity.svg" alt="05rDev Activity & System Metrics" width="100%" />
+    <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/activity.svg" alt="05rDev Activity & System Metrics" width="100%" />
   </a>
 
 </div>
