@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { generateNeuralMatrixSVG } from './generate-neural-matrix.mjs';
 
 const USERNAME = '05rdev';
 // GH_TOKEN is a Personal Access Token with 'repo' scope that can read private projects
@@ -135,6 +136,12 @@ async function run() {
     // Also update root activity.svg
     fs.writeFileSync(svgPath, svg, 'utf-8');
     console.log(`[Activity Generator] Updated root activity.svg`);
+
+    // Generate Quantum Neural Matrix SVG (Alternative to Snake)
+    const matrixSvg = generateNeuralMatrixSVG({ total, days, currentStreak, longestStreak, username: USERNAME });
+    fs.writeFileSync(path.join(distDir, 'neural-matrix.svg'), matrixSvg, 'utf-8');
+    fs.writeFileSync(path.resolve('matrix.svg'), matrixSvg, 'utf-8');
+    console.log(`[Activity Generator] Saved dist/neural-matrix.svg & root matrix.svg`);
 
   } catch (err) {
     console.error(`[Activity Generator] Error:`, err);

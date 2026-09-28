@@ -111,12 +111,11 @@ thong_tin:
 
 ---
 
-### 🐍 Hành trình đóng góp mã nguồn (Snake Game)
+### ⚡ Ma trận Lượng tử Đóng góp Mã nguồn (Quantum Neural Matrix)
 
 <div align="center">
-  <!-- Ảnh rắn săn mồi: Sẽ tự động hiển thị sau khi bạn push code lên GitHub và Action chạy lần đầu -->
-  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%" />
-  <p><i>💡 Bản đồ đóng góp được tự động biến hóa thành trò chơi Rắn săn mồi qua GitHub Actions (Cập nhật định kỳ).</i></p>
+  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/neural-matrix.svg" alt="05rDev Quantum Neural Contribution Matrix" width="100%" />
+  <p><i>⚡ Ma trận nơ-ron đóng góp 365 ngày &amp; Nhịp đập kỹ thuật Cardiogram (Tự động cập nhật qua GitHub Actions).</i></p>
 </div>
 
 ---
