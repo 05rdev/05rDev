@@ -1,0 +1,1531 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 260" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="matrixBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#070a14" />
+    </linearGradient>
+
+    <!-- Aurora Holographic Accent Gradient -->
+    <linearGradient id="matrixAurora" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#4facfe" />
+      <stop offset="70%" stop-color="#9b51e0" />
+      <stop offset="100%" stop-color="#ff416c" />
+    </linearGradient>
+
+    <!-- Laser Scanning Beam Gradient -->
+    <linearGradient id="laserBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.06" />
+      <stop offset="90%" stop-color="#00f2fe" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- ECG Gradient Area Fill -->
+    <linearGradient id="ecgAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.0" />
+    </linearGradient>
+
+    <!-- Radial Nebula Blurs for Background Glow -->
+    <radialGradient id="nebulaCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9b51e0" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#9b51e0" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="nebulaPink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff416c" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#ff416c" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Background Grid Dots -->
+    <pattern id="matrixDotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="#4facfe" opacity="0.08" />
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowCyanSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowPurple" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowPink" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="laserGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style><![CDATA[
+      /* Perimeter Light Circuit Stream */
+      .matrix-stream {
+        stroke-dasharray: 14, 200;
+        animation: streamFlow 10s linear infinite;
+      }
+      @keyframes streamFlow {
+        to { stroke-dashoffset: -856; }
+      }
+
+      /* Nebula Float Motion */
+      .nebula-float-1 {
+        animation: nebulaMove1 16s ease-in-out infinite alternate;
+      }
+      @keyframes nebulaMove1 {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(35px, -12px) scale(1.1); }
+        100% { transform: translate(-20px, 8px) scale(0.95); }
+      }
+
+      .nebula-float-2 {
+        animation: nebulaMove2 13s ease-in-out infinite alternate;
+      }
+      @keyframes nebulaMove2 {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-25px, 15px) scale(1.08); }
+        100% { transform: translate(25px, -10px) scale(0.98); }
+      }
+
+      /* Radar Sweep Needle & Pulse */
+      .radar-sweep-needle {
+        transform-origin: 38px 28px;
+        animation: radarSpin 3.5s linear infinite;
+      }
+      @keyframes radarSpin {
+        to { transform: rotate(360deg); }
+      }
+
+      .radar-pulse {
+        animation: radarPing 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+        transform-origin: 38px 28px;
+      }
+      @keyframes radarPing {
+        0% { r: 3px; opacity: 1; stroke-width: 1px; }
+        70% { r: 13px; opacity: 0; stroke-width: 2px; }
+        100% { r: 15px; opacity: 0; stroke-width: 0; }
+      }
+
+      /* Quantum Laser Scanning Beam Sweep */
+      .scanner-beam-group {
+        animation: laserScan 6.5s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+      }
+      @keyframes laserScan {
+        0% { transform: translateX(0px); opacity: 0; }
+        4% { opacity: 1; }
+        92% { opacity: 1; }
+        98% { transform: translateX(718px); opacity: 0; }
+        100% { transform: translateX(718px); opacity: 0; }
+      }
+
+      /* Neural Synapse Data Packet Stream */
+      .synapse-stream {
+        animation: dataFlow 1.6s linear infinite;
+      }
+      @keyframes dataFlow {
+        to { stroke-dashoffset: -32; }
+      }
+
+      /* Impact Ripple on Active Nodes */
+      .impact-ripple {
+        animation: rippleBreathe 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+        transform-origin: center;
+      }
+      @keyframes rippleBreathe {
+        0% { transform: scale(0.9); opacity: 0.8; stroke-width: 1.2px; }
+        70% { transform: scale(1.5); opacity: 0; stroke-width: 0.4px; }
+        100% { transform: scale(1.6); opacity: 0; }
+      }
+
+      /* Active Node Breathing Pulses */
+      .pulse-node-cyan {
+        animation: nodeBreatheCyan 2.8s ease-in-out infinite alternate;
+      }
+      @keyframes nodeBreatheCyan {
+        0% { filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.4)); opacity: 0.85; }
+        100% { filter: drop-shadow(0 0 8px rgba(0, 242, 254, 1)); opacity: 1; }
+      }
+
+      .pulse-node-purple {
+        animation: nodeBreathePurple 2.4s ease-in-out infinite alternate;
+      }
+      @keyframes nodeBreathePurple {
+        0% { filter: drop-shadow(0 0 2px rgba(155, 81, 224, 0.4)); }
+        100% { filter: drop-shadow(0 0 8px rgba(155, 81, 224, 1)); }
+      }
+
+      .pulse-node-pink {
+        animation: nodeBreathePink 2s ease-in-out infinite alternate;
+      }
+      @keyframes nodeBreathePink {
+        0% { filter: drop-shadow(0 0 3px rgba(255, 65, 108, 0.5)); }
+        100% { filter: drop-shadow(0 0 10px rgba(255, 65, 108, 1)); }
+      }
+
+      /* Sci-Fi Text Glitch */
+      .glitch-text {
+        animation: textGlitch 9s infinite;
+      }
+      @keyframes textGlitch {
+        0%, 93%, 100% { transform: skew(0deg); opacity: 1; filter: none; }
+        94% { transform: skew(2.5deg); opacity: 0.85; filter: drop-shadow(-1.5px 0 #ff416c) drop-shadow(1.5px 0 #00f2fe); }
+        95% { transform: skew(-2deg); opacity: 0.95; }
+        96% { transform: skew(0deg); opacity: 1; filter: none; }
+      }
+
+      /* ECG Cardiogram Glow Pulse */
+      .ecg-line {
+        animation: ecgPulse 3s ease-in-out infinite alternate;
+      }
+      @keyframes ecgPulse {
+        0% { stroke: #00f2fe; filter: drop-shadow(0 0 2px rgba(0, 242, 254, 0.4)); }
+        100% { stroke: #4facfe; filter: drop-shadow(0 0 6px rgba(79, 172, 254, 0.8)); }
+      }
+
+      .font-mono { font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', Consolas, monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    ]]></style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="840" height="260" rx="14" fill="url(#matrixBg)" />
+  <rect width="840" height="260" rx="14" fill="url(#matrixDotGrid)" />
+
+  <!-- Floating Deep Space Aurora Nebula Blobs -->
+  <g class="nebula-float-1">
+    <ellipse cx="220" cy="110" rx="160" ry="60" fill="url(#nebulaCyan)" />
+  </g>
+  <g class="nebula-float-2">
+    <ellipse cx="640" cy="130" rx="170" ry="70" fill="url(#nebulaPurple)" />
+    <ellipse cx="440" cy="100" rx="140" ry="50" fill="url(#nebulaPink)" />
+  </g>
+
+  <!-- Outer Border Frame -->
+  <path d="M 24,10 L 816,10 Q 830,10 830,24 L 830,236 Q 830,250 816,250 L 24,250 Q 10,250 10,236 L 10,24 Q 10,10 24,10 Z"
+        fill="none" stroke="#1d283f" stroke-width="1.2" />
+
+  <!-- Animated Circuit Stream -->
+  <path class="matrix-stream" d="M 24,10 L 816,10 Q 830,10 830,24 L 830,236 Q 830,250 816,250 L 24,250 Q 10,250 10,236 L 10,24 Q 10,10 24,10 Z"
+        fill="none" stroke="url(#matrixAurora)" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Top Telemetry Header -->
+  <g transform="translate(0, 0)">
+    <!-- Rotating Radar with Target Reticle -->
+    <circle cx="38" cy="28" r="10" fill="none" stroke="#1b2a44" stroke-width="1" />
+    <circle cx="38" cy="28" r="5" fill="none" stroke="#1b2a44" stroke-width="0.8" />
+    <circle class="radar-pulse" cx="38" cy="28" r="3.5" fill="none" stroke="#00f2fe" />
+    <circle cx="38" cy="28" r="2.5" fill="#00f2fe" />
+    
+    <!-- Rotating radar sweep ray -->
+    <line class="radar-sweep-needle" x1="38" y1="28" x2="38" y2="18" stroke="#00f2fe" stroke-width="1.2" stroke-linecap="round" filter="url(#glowCyanSoft)" />
+
+    <!-- Glitch Heading -->
+    <text x="56" y="32" class="font-mono glitch-text" font-size="10" font-weight="700" fill="#00f2fe" letter-spacing="1.5">
+      QUANTUM_NEURAL_GRID // SYSTEM_CONTRIBUTION_MATRIX
+    </text>
+
+    <!-- Telemetry Badges Right (100% Real GitHub Metrics) -->
+    <text x="806" y="32" class="font-mono" font-size="8.5" fill="#7186a6" letter-spacing="1.2" text-anchor="end">
+      TOTAL: <tspan fill="#00f2fe" font-weight="700">255</tspan> | ACTIVE: <tspan fill="#4facfe" font-weight="700">59D</tspan> | PEAK: <tspan fill="#ff416c" font-weight="700">49/DAY</tspan> | STREAK: <tspan fill="#00f2fe" font-weight="700">14D</tspan>
+    </text>
+
+    <!-- Dividing accent line -->
+    <line x1="28" y1="46" x2="812" y2="46" stroke="#1d283f" stroke-width="1" />
+  </g>
+
+  <!-- Month Labels -->
+  <g>
+    <text x="64" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Oct</text>
+    <text x="118" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Nov</text>
+    <text x="185.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Dec</text>
+    <text x="239.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Jan</text>
+    <text x="293.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Feb</text>
+    <text x="347.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Mar</text>
+    <text x="415" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Apr</text>
+    <text x="469" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">May</text>
+    <text x="536.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Jun</text>
+    <text x="590.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Jul</text>
+    <text x="644.5" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Aug</text>
+    <text x="712" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Sep</text>
+    <text x="766" y="59" class="font-mono" font-size="8" fill="#586f91" letter-spacing="0.5">Oct</text>
+  </g>
+
+  <!-- Day of Week Labels (Mon, Wed, Fri) -->
+  <g class="font-mono" font-size="8" fill="#586f91" text-anchor="end">
+    <text x="54" y="90">Mon</text>
+    <text x="54" y="117">Wed</text>
+    <text x="54" y="144">Fri</text>
+  </g>
+
+  <!-- Neural Connection Synapses between Active Nodes -->
+
+    <!-- Neural Synapse Connections (Real Activity Clusters) -->
+    <path d="M 190.5 154 L 204 73 M 204 73 L 204 140.5 M 258 113.5 L 258 127 M 258 127 L 285 127 M 285 127 L 285 154 M 406.5 86.5 L 420 86.5 M 420 86.5 L 433.5 100 M 433.5 100 L 447 100 M 447 100 L 447 113.5 M 447 113.5 L 447 127 M 447 127 L 447 140.5 M 447 140.5 L 460.5 100 M 460.5 100 L 460.5 113.5 M 460.5 113.5 L 460.5 127 M 460.5 127 L 460.5 154 M 460.5 154 L 487.5 127 M 487.5 127 L 501 113.5 M 501 113.5 L 501 127 M 501 127 L 501 140.5 M 501 140.5 L 514.5 127 M 514.5 127 L 514.5 140.5 M 514.5 140.5 L 541.5 140.5 M 541.5 140.5 L 555 113.5 M 555 113.5 L 582 100 M 582 100 L 582 113.5 M 582 113.5 L 582 127 M 582 127 L 582 154 M 582 154 L 595.5 73 M 595.5 73 L 595.5 86.5 M 595.5 86.5 L 595.5 100 M 595.5 100 L 595.5 140.5 M 595.5 140.5 L 595.5 154 M 595.5 154 L 609 86.5 M 609 86.5 L 609 100 M 609 100 L 609 113.5 M 609 113.5 L 609 127 M 609 127 L 622.5 86.5 M 622.5 86.5 L 663 86.5 M 730.5 113.5 L 730.5 154 M 730.5 154 L 744 140.5 M 744 140.5 L 757.5 73 M 757.5 73 L 757.5 86.5 M 757.5 86.5 L 757.5 100 M 757.5 100 L 757.5 113.5 M 757.5 113.5 L 757.5 127 M 757.5 127 L 757.5 140.5 M 757.5 140.5 L 757.5 154 M 757.5 154 L 771 73 M 771 73 L 771 86.5 M 771 86.5 L 771 100 M 771 100 L 771 113.5 M 771 113.5 L 771 127 M 771 127 L 771 140.5 M 771 140.5 L 771 154" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-opacity="0.55" stroke-dasharray="3, 5" class="synapse-stream" />
+    <path d="M 190.5 154 L 204 73 M 204 73 L 204 140.5 M 258 113.5 L 258 127 M 258 127 L 285 127 M 285 127 L 285 154 M 406.5 86.5 L 420 86.5 M 420 86.5 L 433.5 100 M 433.5 100 L 447 100 M 447 100 L 447 113.5 M 447 113.5 L 447 127 M 447 127 L 447 140.5 M 447 140.5 L 460.5 100 M 460.5 100 L 460.5 113.5 M 460.5 113.5 L 460.5 127 M 460.5 127 L 460.5 154 M 460.5 154 L 487.5 127 M 487.5 127 L 501 113.5 M 501 113.5 L 501 127 M 501 127 L 501 140.5 M 501 140.5 L 514.5 127 M 514.5 127 L 514.5 140.5 M 514.5 140.5 L 541.5 140.5 M 541.5 140.5 L 555 113.5 M 555 113.5 L 582 100 M 582 100 L 582 113.5 M 582 113.5 L 582 127 M 582 127 L 582 154 M 582 154 L 595.5 73 M 595.5 73 L 595.5 86.5 M 595.5 86.5 L 595.5 100 M 595.5 100 L 595.5 140.5 M 595.5 140.5 L 595.5 154 M 595.5 154 L 609 86.5 M 609 86.5 L 609 100 M 609 100 L 609 113.5 M 609 113.5 L 609 127 M 609 127 L 622.5 86.5 M 622.5 86.5 L 663 86.5 M 730.5 113.5 L 730.5 154 M 730.5 154 L 744 140.5 M 744 140.5 L 757.5 73 M 757.5 73 L 757.5 86.5 M 757.5 86.5 L 757.5 100 M 757.5 100 L 757.5 113.5 M 757.5 113.5 L 757.5 127 M 757.5 127 L 757.5 140.5 M 757.5 140.5 L 757.5 154 M 757.5 154 L 771 73 M 771 73 L 771 86.5 M 771 86.5 L 771 100 M 771 100 L 771 113.5 M 771 113.5 L 771 127 M 771 127 L 771 140.5 M 771 140.5 L 771 154" fill="none" stroke="url(#matrixAurora)" stroke-width="1.2" stroke-opacity="0.4" />
+    
+
+  <!-- Neural Matrix Grid Cells -->
+  <g>
+    <rect x="64" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-05: 0 contributions</title>
+    </rect>
+    <rect x="64" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-06: 0 contributions</title>
+    </rect>
+    <rect x="64" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-07: 0 contributions</title>
+    </rect>
+    <rect x="64" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-08: 0 contributions</title>
+    </rect>
+    <rect x="64" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-09: 0 contributions</title>
+    </rect>
+    <rect x="64" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-10: 0 contributions</title>
+    </rect>
+    <rect x="64" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-11: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-12: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-13: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-14: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-15: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-16: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-17: 0 contributions</title>
+    </rect>
+    <rect x="77.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-18: 0 contributions</title>
+    </rect>
+    <rect x="91" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-19: 0 contributions</title>
+    </rect>
+    <rect x="91" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-20: 0 contributions</title>
+    </rect>
+    <rect x="91" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-21: 0 contributions</title>
+    </rect>
+    <rect x="91" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-22: 0 contributions</title>
+    </rect>
+    <rect x="91" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-23: 0 contributions</title>
+    </rect>
+    <rect x="91" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-24: 0 contributions</title>
+    </rect>
+    <rect x="91" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-25: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-26: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-27: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-28: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-29: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-30: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-10-31: 0 contributions</title>
+    </rect>
+    <rect x="104.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-01: 0 contributions</title>
+    </rect>
+    <rect x="118" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-02: 0 contributions</title>
+    </rect>
+    <rect x="118" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-03: 0 contributions</title>
+    </rect>
+    <rect x="118" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-04: 0 contributions</title>
+    </rect>
+    <rect x="118" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-05: 0 contributions</title>
+    </rect>
+    <rect x="118" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-06: 0 contributions</title>
+    </rect>
+    <rect x="118" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-07: 0 contributions</title>
+    </rect>
+    <rect x="118" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-08: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-09: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-10: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-11: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-12: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-13: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-14: 0 contributions</title>
+    </rect>
+    <rect x="131.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-15: 0 contributions</title>
+    </rect>
+    <rect x="145" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-16: 0 contributions</title>
+    </rect>
+    <rect x="145" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-17: 0 contributions</title>
+    </rect>
+    <rect x="145" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-18: 0 contributions</title>
+    </rect>
+    <rect x="145" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-19: 0 contributions</title>
+    </rect>
+    <rect x="145" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-20: 0 contributions</title>
+    </rect>
+    <rect x="145" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-21: 0 contributions</title>
+    </rect>
+    <rect x="145" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-22: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-23: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-24: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-25: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-26: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-27: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-28: 0 contributions</title>
+    </rect>
+    <rect x="158.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-29: 0 contributions</title>
+    </rect>
+    <rect x="172" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-11-30: 0 contributions</title>
+    </rect>
+    <rect x="172" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-01: 0 contributions</title>
+    </rect>
+    <rect x="172" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-02: 0 contributions</title>
+    </rect>
+    <rect x="172" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-03: 0 contributions</title>
+    </rect>
+    <rect x="172" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-04: 0 contributions</title>
+    </rect>
+    <rect x="172" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-05: 0 contributions</title>
+    </rect>
+    <rect x="172" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-06: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-07: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-08: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-09: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-10: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-11: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-12: 0 contributions</title>
+    </rect>
+    <rect x="185.5" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2025-12-13: 2 contributions</title>
+    </rect>
+    <rect x="199" y="68" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2025-12-14: 2 contributions</title>
+    </rect>
+    <rect x="199" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-15: 0 contributions</title>
+    </rect>
+    <rect x="199" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-16: 0 contributions</title>
+    </rect>
+    <rect x="199" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-17: 0 contributions</title>
+    </rect>
+    <rect x="199" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-18: 0 contributions</title>
+    </rect>
+    <rect x="199" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2025-12-19: 1 contributions</title>
+    </rect>
+    <rect x="199" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-20: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-21: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-22: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-23: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-24: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-25: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-26: 0 contributions</title>
+    </rect>
+    <rect x="212.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-27: 0 contributions</title>
+    </rect>
+    <rect x="226" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-28: 0 contributions</title>
+    </rect>
+    <rect x="226" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-29: 0 contributions</title>
+    </rect>
+    <rect x="226" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-30: 0 contributions</title>
+    </rect>
+    <rect x="226" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2025-12-31: 0 contributions</title>
+    </rect>
+    <rect x="226" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-01: 0 contributions</title>
+    </rect>
+    <rect x="226" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-02: 0 contributions</title>
+    </rect>
+    <rect x="226" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-03: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-04: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-05: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-06: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-07: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-08: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-09: 0 contributions</title>
+    </rect>
+    <rect x="239.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-10: 0 contributions</title>
+    </rect>
+    <rect x="253" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-11: 0 contributions</title>
+    </rect>
+    <rect x="253" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-12: 0 contributions</title>
+    </rect>
+    <rect x="253" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-13: 0 contributions</title>
+    </rect>
+    <rect x="253" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-01-14: 2 contributions</title>
+    </rect>
+    <rect x="253" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-01-15: 3 contributions</title>
+    </rect>
+    <rect x="253" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-16: 0 contributions</title>
+    </rect>
+    <rect x="253" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-17: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-18: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-19: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-20: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-21: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-22: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-23: 0 contributions</title>
+    </rect>
+    <rect x="266.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-24: 0 contributions</title>
+    </rect>
+    <rect x="280" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-25: 0 contributions</title>
+    </rect>
+    <rect x="280" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-26: 0 contributions</title>
+    </rect>
+    <rect x="280" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-27: 0 contributions</title>
+    </rect>
+    <rect x="280" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-28: 0 contributions</title>
+    </rect>
+    <rect x="280" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-01-29: 4 contributions</title>
+    </rect>
+    <rect x="280" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-01-30: 0 contributions</title>
+    </rect>
+    <rect x="280" y="149" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-01-31: 6 contributions</title>
+    </rect>
+    <rect x="293.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-01: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-02: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-03: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-04: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-05: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-06: 0 contributions</title>
+    </rect>
+    <rect x="293.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-07: 0 contributions</title>
+    </rect>
+    <rect x="307" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-08: 0 contributions</title>
+    </rect>
+    <rect x="307" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-09: 0 contributions</title>
+    </rect>
+    <rect x="307" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-10: 0 contributions</title>
+    </rect>
+    <rect x="307" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-11: 0 contributions</title>
+    </rect>
+    <rect x="307" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-12: 0 contributions</title>
+    </rect>
+    <rect x="307" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-13: 0 contributions</title>
+    </rect>
+    <rect x="307" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-14: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-15: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-16: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-17: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-18: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-19: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-20: 0 contributions</title>
+    </rect>
+    <rect x="320.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-21: 0 contributions</title>
+    </rect>
+    <rect x="334" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-22: 0 contributions</title>
+    </rect>
+    <rect x="334" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-23: 0 contributions</title>
+    </rect>
+    <rect x="334" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-24: 0 contributions</title>
+    </rect>
+    <rect x="334" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-25: 0 contributions</title>
+    </rect>
+    <rect x="334" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-26: 0 contributions</title>
+    </rect>
+    <rect x="334" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-27: 0 contributions</title>
+    </rect>
+    <rect x="334" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-02-28: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="68" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-03-01: 3 contributions</title>
+    </rect>
+    <rect x="347.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-02: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-03: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-04: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-05: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-06: 0 contributions</title>
+    </rect>
+    <rect x="347.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-07: 0 contributions</title>
+    </rect>
+    <rect x="361" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-08: 0 contributions</title>
+    </rect>
+    <rect x="361" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-09: 0 contributions</title>
+    </rect>
+    <rect x="361" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-10: 0 contributions</title>
+    </rect>
+    <rect x="361" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-11: 0 contributions</title>
+    </rect>
+    <rect x="361" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-12: 0 contributions</title>
+    </rect>
+    <rect x="361" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-13: 0 contributions</title>
+    </rect>
+    <rect x="361" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-14: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-15: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-16: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-17: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-18: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-19: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-20: 0 contributions</title>
+    </rect>
+    <rect x="374.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-21: 0 contributions</title>
+    </rect>
+    <rect x="388" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-22: 0 contributions</title>
+    </rect>
+    <rect x="388" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-23: 0 contributions</title>
+    </rect>
+    <rect x="388" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-24: 0 contributions</title>
+    </rect>
+    <rect x="388" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-25: 0 contributions</title>
+    </rect>
+    <rect x="388" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-26: 0 contributions</title>
+    </rect>
+    <rect x="388" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-27: 0 contributions</title>
+    </rect>
+    <rect x="388" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-28: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-29: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="81.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-03-30: 5 contributions</title>
+    </rect>
+    <rect x="401.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-03-31: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-01: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-02: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-03: 0 contributions</title>
+    </rect>
+    <rect x="401.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-04: 0 contributions</title>
+    </rect>
+    <rect x="415" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-05: 0 contributions</title>
+    </rect>
+    <rect x="415" y="81.5" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-04-06: 7 contributions</title>
+    </rect>
+    <rect x="415" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-07: 0 contributions</title>
+    </rect>
+    <rect x="415" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-08: 0 contributions</title>
+    </rect>
+    <rect x="415" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-09: 0 contributions</title>
+    </rect>
+    <rect x="415" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-10: 0 contributions</title>
+    </rect>
+    <rect x="415" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-11: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-12: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-13: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="95" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-04-14: 3 contributions</title>
+    </rect>
+    <rect x="428.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-15: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-16: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-17: 0 contributions</title>
+    </rect>
+    <rect x="428.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-18: 0 contributions</title>
+    </rect>
+    <rect x="442" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-19: 0 contributions</title>
+    </rect>
+    <rect x="442" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-20: 0 contributions</title>
+    </rect>
+    <rect x="442" y="95" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-04-21: 3 contributions</title>
+    </rect>
+    <rect x="442" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-04-22: 2 contributions</title>
+    </rect>
+    <rect x="442" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-04-23: 3 contributions</title>
+    </rect>
+    <rect x="442" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-04-24: 1 contributions</title>
+    </rect>
+    <rect x="442" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-25: 0 contributions</title>
+    </rect>
+    <rect x="455.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-26: 0 contributions</title>
+    </rect>
+    <rect x="455.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-04-27: 0 contributions</title>
+    </rect>
+    <rect x="455.5" y="95" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-04-28: 6 contributions</title>
+    </rect>
+    <rect x="455.5" y="108.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-04-29: 4 contributions</title>
+    </rect>
+    <rect x="455.5" y="122" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-04-30: 1 contributions</title>
+    </rect>
+    <rect x="455.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-01: 0 contributions</title>
+    </rect>
+    <rect x="455.5" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-02: 1 contributions</title>
+    </rect>
+    <rect x="469" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-03: 0 contributions</title>
+    </rect>
+    <rect x="469" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-04: 0 contributions</title>
+    </rect>
+    <rect x="469" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-05: 0 contributions</title>
+    </rect>
+    <rect x="469" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-06: 0 contributions</title>
+    </rect>
+    <rect x="469" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-07: 0 contributions</title>
+    </rect>
+    <rect x="469" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-08: 0 contributions</title>
+    </rect>
+    <rect x="469" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-09: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-10: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-11: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-12: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-13: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-05-14: 3 contributions</title>
+    </rect>
+    <rect x="482.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-15: 0 contributions</title>
+    </rect>
+    <rect x="482.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-16: 0 contributions</title>
+    </rect>
+    <rect x="496" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-17: 0 contributions</title>
+    </rect>
+    <rect x="496" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-18: 0 contributions</title>
+    </rect>
+    <rect x="496" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-19: 0 contributions</title>
+    </rect>
+    <rect x="496" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-20: 1 contributions</title>
+    </rect>
+    <rect x="496" y="122" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-21: 1 contributions</title>
+    </rect>
+    <rect x="496" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-22: 2 contributions</title>
+    </rect>
+    <rect x="496" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-23: 0 contributions</title>
+    </rect>
+    <rect x="509.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-24: 0 contributions</title>
+    </rect>
+    <rect x="509.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-25: 0 contributions</title>
+    </rect>
+    <rect x="509.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-26: 0 contributions</title>
+    </rect>
+    <rect x="509.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-27: 0 contributions</title>
+    </rect>
+    <rect x="509.5" y="122" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-28: 1 contributions</title>
+    </rect>
+    <rect x="509.5" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-05-29: 2 contributions</title>
+    </rect>
+    <rect x="509.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-30: 0 contributions</title>
+    </rect>
+    <rect x="523" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-05-31: 0 contributions</title>
+    </rect>
+    <rect x="523" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-01: 0 contributions</title>
+    </rect>
+    <rect x="523" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-02: 0 contributions</title>
+    </rect>
+    <rect x="523" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-03: 0 contributions</title>
+    </rect>
+    <rect x="523" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-04: 0 contributions</title>
+    </rect>
+    <rect x="523" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-05: 0 contributions</title>
+    </rect>
+    <rect x="523" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-06: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-07: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-08: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-09: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-10: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-11: 0 contributions</title>
+    </rect>
+    <rect x="536.5" y="135.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-06-12: 5 contributions</title>
+    </rect>
+    <rect x="536.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-13: 0 contributions</title>
+    </rect>
+    <rect x="550" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-14: 0 contributions</title>
+    </rect>
+    <rect x="550" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-15: 0 contributions</title>
+    </rect>
+    <rect x="550" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-16: 0 contributions</title>
+    </rect>
+    <rect x="550" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-06-17: 2 contributions</title>
+    </rect>
+    <rect x="550" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-18: 0 contributions</title>
+    </rect>
+    <rect x="550" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-19: 0 contributions</title>
+    </rect>
+    <rect x="550" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-20: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-21: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-22: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-23: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-24: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-25: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-26: 0 contributions</title>
+    </rect>
+    <rect x="563.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-27: 0 contributions</title>
+    </rect>
+    <rect x="577" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-28: 0 contributions</title>
+    </rect>
+    <rect x="577" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-06-29: 0 contributions</title>
+    </rect>
+    <rect x="577" y="95" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-06-30: 2 contributions</title>
+    </rect>
+    <rect x="577" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-07-01: 1 contributions</title>
+    </rect>
+    <rect x="577" y="122" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-07-02: 2 contributions</title>
+    </rect>
+    <rect x="577" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-03: 0 contributions</title>
+    </rect>
+    <rect x="577" y="149" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-04: 5 contributions</title>
+    </rect>
+    <rect x="590.5" y="68" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-07-05: 8 contributions</title>
+    </rect>
+    <rect x="590.5" y="81.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-06: 3 contributions</title>
+    </rect>
+    <rect x="590.5" y="95" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-07: 4 contributions</title>
+    </rect>
+    <rect x="590.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-08: 0 contributions</title>
+    </rect>
+    <rect x="590.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-09: 0 contributions</title>
+    </rect>
+    <rect x="590.5" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-07-10: 1 contributions</title>
+    </rect>
+    <rect x="590.5" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-07-11: 2 contributions</title>
+    </rect>
+    <rect x="604" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-12: 0 contributions</title>
+    </rect>
+    <rect x="604" y="81.5" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-07-13: 6 contributions</title>
+    </rect>
+    <rect x="604" y="95" width="10" height="10" rx="2.5" fill="#ff416c" stroke="#ff758c" stroke-width="0.8" filter="url(#glowPink)" class="pulse-node-pink">
+      <title>2026-07-14: 19 contributions</title>
+    </rect>
+    <rect x="604" y="108.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-15: 5 contributions</title>
+    </rect>
+    <rect x="604" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-16: 4 contributions</title>
+    </rect>
+    <rect x="604" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-17: 0 contributions</title>
+    </rect>
+    <rect x="604" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-18: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-19: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="81.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-07-20: 3 contributions</title>
+    </rect>
+    <rect x="617.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-21: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-22: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-23: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-24: 0 contributions</title>
+    </rect>
+    <rect x="617.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-25: 0 contributions</title>
+    </rect>
+    <rect x="631" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-26: 0 contributions</title>
+    </rect>
+    <rect x="631" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-27: 0 contributions</title>
+    </rect>
+    <rect x="631" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-28: 0 contributions</title>
+    </rect>
+    <rect x="631" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-29: 0 contributions</title>
+    </rect>
+    <rect x="631" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-30: 0 contributions</title>
+    </rect>
+    <rect x="631" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-07-31: 0 contributions</title>
+    </rect>
+    <rect x="631" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-01: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-02: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-03: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-04: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-05: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-06: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-07: 0 contributions</title>
+    </rect>
+    <rect x="644.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-08: 0 contributions</title>
+    </rect>
+    <rect x="658" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-09: 0 contributions</title>
+    </rect>
+    <rect x="658" y="81.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-08-10: 2 contributions</title>
+    </rect>
+    <rect x="658" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-11: 0 contributions</title>
+    </rect>
+    <rect x="658" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-12: 0 contributions</title>
+    </rect>
+    <rect x="658" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-13: 0 contributions</title>
+    </rect>
+    <rect x="658" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-14: 0 contributions</title>
+    </rect>
+    <rect x="658" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-15: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-16: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-17: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-18: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-19: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-20: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-21: 0 contributions</title>
+    </rect>
+    <rect x="671.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-22: 0 contributions</title>
+    </rect>
+    <rect x="685" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-23: 0 contributions</title>
+    </rect>
+    <rect x="685" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-24: 0 contributions</title>
+    </rect>
+    <rect x="685" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-25: 0 contributions</title>
+    </rect>
+    <rect x="685" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-26: 0 contributions</title>
+    </rect>
+    <rect x="685" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-27: 0 contributions</title>
+    </rect>
+    <rect x="685" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-28: 0 contributions</title>
+    </rect>
+    <rect x="685" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-29: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-30: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-08-31: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-01: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-02: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-03: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-04: 0 contributions</title>
+    </rect>
+    <rect x="698.5" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-05: 0 contributions</title>
+    </rect>
+    <rect x="712" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-06: 0 contributions</title>
+    </rect>
+    <rect x="712" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-07: 0 contributions</title>
+    </rect>
+    <rect x="712" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-08: 0 contributions</title>
+    </rect>
+    <rect x="712" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-09: 0 contributions</title>
+    </rect>
+    <rect x="712" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-10: 0 contributions</title>
+    </rect>
+    <rect x="712" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-11: 0 contributions</title>
+    </rect>
+    <rect x="712" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-12: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-13: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-14: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-15: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-09-16: 2 contributions</title>
+    </rect>
+    <rect x="725.5" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-17: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="135.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-18: 0 contributions</title>
+    </rect>
+    <rect x="725.5" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-09-19: 2 contributions</title>
+    </rect>
+    <rect x="739" y="68" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-20: 0 contributions</title>
+    </rect>
+    <rect x="739" y="81.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-21: 0 contributions</title>
+    </rect>
+    <rect x="739" y="95" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-22: 0 contributions</title>
+    </rect>
+    <rect x="739" y="108.5" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-23: 0 contributions</title>
+    </rect>
+    <rect x="739" y="122" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-24: 0 contributions</title>
+    </rect>
+    <rect x="739" y="135.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-09-25: 4 contributions</title>
+    </rect>
+    <rect x="739" y="149" width="10" height="10" rx="2.5" fill="#0b1324" stroke="#15243d" stroke-width="0.8"  >
+      <title>2026-09-26: 0 contributions</title>
+    </rect>
+    <rect x="752.5" y="68" width="10" height="10" rx="2.5" fill="#ff416c" stroke="#ff758c" stroke-width="0.8" filter="url(#glowPink)" class="pulse-node-pink">
+      <title>2026-09-27: 49 contributions</title>
+    </rect>
+    <rect x="752.5" y="81.5" width="10" height="10" rx="2.5" fill="#ff416c" stroke="#ff758c" stroke-width="0.8" filter="url(#glowPink)" class="pulse-node-pink">
+      <title>2026-09-28: 25 contributions</title>
+    </rect>
+    <rect x="752.5" y="95" width="10" height="10" rx="2.5" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" class="pulse-node-purple">
+      <title>2026-09-29: 9 contributions</title>
+    </rect>
+    <rect x="752.5" y="108.5" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-09-30: 3 contributions</title>
+    </rect>
+    <rect x="752.5" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-10-01: 3 contributions</title>
+    </rect>
+    <rect x="752.5" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-02: 1 contributions</title>
+    </rect>
+    <rect x="752.5" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-03: 2 contributions</title>
+    </rect>
+    <rect x="766" y="68" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-04: 2 contributions</title>
+    </rect>
+    <rect x="766" y="81.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-05: 2 contributions</title>
+    </rect>
+    <rect x="766" y="95" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-06: 1 contributions</title>
+    </rect>
+    <rect x="766" y="108.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-07: 1 contributions</title>
+    </rect>
+    <rect x="766" y="122" width="10" height="10" rx="2.5" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" class="pulse-node-cyan">
+      <title>2026-10-08: 3 contributions</title>
+    </rect>
+    <rect x="766" y="135.5" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-09: 1 contributions</title>
+    </rect>
+    <rect x="766" y="149" width="10" height="10" rx="2.5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.2" filter="url(#glowCyanSoft)" class="pulse-node-cyan">
+      <title>2026-10-10: 2 contributions</title>
+    </rect>
+  </g>
+
+  <!-- Impact Ripple Circles around Active Nodes -->
+  <g>
+    <circle class="impact-ripple" cx="190.5" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="204" cy="73" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="204" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="258" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="258" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="285" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="285" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="352.5" cy="73" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="406.5" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="420" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="433.5" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="447" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="447" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="447" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="447" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="460.5" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="460.5" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="460.5" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="460.5" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="487.5" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="501" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="501" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="501" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="514.5" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="514.5" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="541.5" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="555" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="582" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="582" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="582" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="582" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="595.5" cy="73" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="595.5" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="595.5" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="595.5" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="595.5" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="609" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="609" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="609" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="609" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="622.5" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="663" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="730.5" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="730.5" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="744" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="73" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="757.5" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="73" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="86.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="100" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="113.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="127" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="140.5" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+    <circle class="impact-ripple" cx="771" cy="154" r="7" stroke="#00f2fe" fill="none" stroke-width="1.2" opacity="0.6" />
+  </g>
+
+  <!-- Sweeping Laser Scanline Beam Group -->
+  <g class="scanner-beam-group">
+    <!-- Semi-transparent Phosphor Wave behind Laser Line -->
+    <rect x="24" y="64" width="40" height="98" fill="url(#laserBeamGrad)" />
+
+    <!-- Sharp Laser Beam Line -->
+    <line x1="64" y1="62" x2="64" y2="164" stroke="#00f2fe" stroke-width="1.8" filter="url(#laserGlow)" />
+    
+    <!-- Laser Optical Emitter Nodes -->
+    <circle cx="64" cy="62" r="2.2" fill="#ffffff" filter="url(#laserGlow)" />
+    <circle cx="64" cy="164" r="2.2" fill="#ffffff" filter="url(#laserGlow)" />
+  </g>
+
+  <!-- Activity Signal / Heartbeat Waveform (ECG Pulse) Section -->
+  <g transform="translate(0, 0)">
+    <!-- Cardiogram Area Gradient Fill -->
+    <path d="M 64,198 L 69,198 L 82.5,198 L 96,198 L 109.5,198 L 123,198 L 136.5,198 L 150,198 L 163.5,198 L 177,198 L 187.5,198 L 189.5,200 L 190.5,182 L 192,201 L 193.5,198 L 201,198 L 203,200 L 204,177 L 205.5,201 L 207,198 L 217.5,198 L 231,198 L 244.5,198 L 255,198 L 257,200 L 258,174 L 259.5,201 L 261,198 L 271.5,198 L 282,198 L 284,200 L 285,174 L 286.5,201 L 288,198 L 298.5,198 L 312,198 L 325.5,198 L 339,198 L 349.5,198 L 351.5,200 L 352.5,177 L 354,201 L 355.5,198 L 366,198 L 379.5,198 L 393,198 L 403.5,198 L 405.5,200 L 406.5,174 L 408,201 L 409.5,198 L 417,198 L 419,200 L 420,174 L 421.5,201 L 423,198 L 430.5,198 L 432.5,200 L 433.5,177 L 435,201 L 436.5,198 L 444,198 L 446,200 L 447,174 L 448.5,201 L 450,198 L 457.5,198 L 459.5,200 L 460.5,174 L 462,201 L 463.5,198 L 474,198 L 484.5,198 L 486.5,200 L 487.5,177 L 489,201 L 490.5,198 L 498,198 L 500,200 L 501,174 L 502.5,201 L 504,198 L 511.5,198 L 513.5,200 L 514.5,177 L 516,201 L 517.5,198 L 528,198 L 538.5,198 L 540.5,200 L 541.5,174 L 543,201 L 544.5,198 L 552,198 L 554,200 L 555,182 L 556.5,201 L 558,198 L 568.5,198 L 579,198 L 581,200 L 582,174 L 583.5,201 L 585,198 L 592.5,198 L 594.5,200 L 595.5,174 L 597,201 L 598.5,198 L 606,198 L 608,200 L 609,174 L 610.5,201 L 612,198 L 619.5,198 L 621.5,200 L 622.5,177 L 624,201 L 625.5,198 L 636,198 L 649.5,198 L 660,198 L 662,200 L 663,182 L 664.5,201 L 666,198 L 676.5,198 L 690,198 L 703.5,198 L 717,198 L 727.5,198 L 729.5,200 L 730.5,174 L 732,201 L 733.5,198 L 741,198 L 743,200 L 744,174 L 745.5,201 L 747,198 L 754.5,198 L 756.5,200 L 757.5,174 L 759,201 L 760.5,198 L 768,198 L 770,200 L 771,174 L 772.5,201 L 774,198 L 771,198 Z" fill="url(#ecgAreaGrad)" />
+
+    <!-- Cardiogram Main Glowing Line -->
+    <path d="M 69,198 L 82.5,198 L 96,198 L 109.5,198 L 123,198 L 136.5,198 L 150,198 L 163.5,198 L 177,198 L 187.5,198 L 189.5,200 L 190.5,182 L 192,201 L 193.5,198 L 201,198 L 203,200 L 204,177 L 205.5,201 L 207,198 L 217.5,198 L 231,198 L 244.5,198 L 255,198 L 257,200 L 258,174 L 259.5,201 L 261,198 L 271.5,198 L 282,198 L 284,200 L 285,174 L 286.5,201 L 288,198 L 298.5,198 L 312,198 L 325.5,198 L 339,198 L 349.5,198 L 351.5,200 L 352.5,177 L 354,201 L 355.5,198 L 366,198 L 379.5,198 L 393,198 L 403.5,198 L 405.5,200 L 406.5,174 L 408,201 L 409.5,198 L 417,198 L 419,200 L 420,174 L 421.5,201 L 423,198 L 430.5,198 L 432.5,200 L 433.5,177 L 435,201 L 436.5,198 L 444,198 L 446,200 L 447,174 L 448.5,201 L 450,198 L 457.5,198 L 459.5,200 L 460.5,174 L 462,201 L 463.5,198 L 474,198 L 484.5,198 L 486.5,200 L 487.5,177 L 489,201 L 490.5,198 L 498,198 L 500,200 L 501,174 L 502.5,201 L 504,198 L 511.5,198 L 513.5,200 L 514.5,177 L 516,201 L 517.5,198 L 528,198 L 538.5,198 L 540.5,200 L 541.5,174 L 543,201 L 544.5,198 L 552,198 L 554,200 L 555,182 L 556.5,201 L 558,198 L 568.5,198 L 579,198 L 581,200 L 582,174 L 583.5,201 L 585,198 L 592.5,198 L 594.5,200 L 595.5,174 L 597,201 L 598.5,198 L 606,198 L 608,200 L 609,174 L 610.5,201 L 612,198 L 619.5,198 L 621.5,200 L 622.5,177 L 624,201 L 625.5,198 L 636,198 L 649.5,198 L 660,198 L 662,200 L 663,182 L 664.5,201 L 666,198 L 676.5,198 L 690,198 L 703.5,198 L 717,198 L 727.5,198 L 729.5,200 L 730.5,174 L 732,201 L 733.5,198 L 741,198 L 743,200 L 744,174 L 745.5,201 L 747,198 L 754.5,198 L 756.5,200 L 757.5,174 L 759,201 L 760.5,198 L 768,198 L 770,200 L 771,174 L 772.5,201 L 774,198" fill="none" stroke-width="1.5" class="ecg-line" stroke-linejoin="round" />
+
+    <!-- Left Telemetry Label for ECG -->
+    <text x="36" y="196" class="font-mono" font-size="7.5" font-weight="700" fill="#4facfe" letter-spacing="1">
+      ACTIVITY_SIGNAL
+    </text>
+    <text x="36" y="206" class="font-mono" font-size="6.5" fill="#586f91">
+      LIVE_CARDIOGRAM
+    </text>
+  </g>
+
+  <!-- Footer Technical Telemetry Bar & Legend -->
+  <g transform="translate(0, 214)">
+    <!-- Dividing line -->
+    <line x1="28" y1="0" x2="812" y2="0" stroke="#1d283f" stroke-width="1" />
+
+    <!-- Charge Level Legend -->
+    <g transform="translate(36, 16)">
+      <text x="0" y="7" class="font-mono" font-size="7.5" fill="#6982a5" letter-spacing="0.5">CONTRIBUTIONS:</text>
+      
+      <text x="96" y="7" class="font-mono" font-size="7" fill="#475569">LESS</text>
+      <rect x="124" y="0" width="8" height="8" rx="2" fill="#0b1324" stroke="#15243d" stroke-width="0.8" />
+      <rect x="136" y="0" width="8" height="8" rx="2" fill="#0284c7" stroke="#38bdf8" stroke-width="0.8" />
+      <rect x="148" y="0" width="8" height="8" rx="2" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" filter="url(#glowCyan)" />
+      <rect x="160" y="0" width="8" height="8" rx="2" fill="#9b51e0" stroke="#c084fc" stroke-width="0.8" filter="url(#glowPurple)" />
+      <rect x="172" y="0" width="8" height="8" rx="2" fill="#ff416c" stroke="#ff758c" stroke-width="0.8" filter="url(#glowPink)" />
+      <text x="186" y="7" class="font-mono" font-size="7" fill="#ff416c">MORE</text>
+    </g>
+
+    <!-- Telemetry Status Right (100% Real Stats) -->
+    <text x="806" y="23" class="font-mono" font-size="7.5" fill="#586f91" letter-spacing="1" text-anchor="end">
+      TOTAL_CONTRIBUTIONS: <tspan fill="#00f2fe" font-weight="700">255</tspan> | CURRENT_STREAK: <tspan fill="#4facfe" font-weight="700">14D</tspan> | LONGEST_STREAK: <tspan fill="#00f2fe" font-weight="700">14D</tspan> // 05RDEV::QUANTUM_CORE
+    </text>
+  </g>
+</svg>
