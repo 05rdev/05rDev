@@ -110,7 +110,7 @@
     </text>
 
     <text x="805" y="32" class="font-mono" font-size="9" fill="#7186a6" letter-spacing="1.2" text-anchor="end">
-      ENGINE: VIBE_MODE_10X // STACK_PROFILE: FULL_SPECTRUM
+      WORKFLOW: AI_ASSISTED_DEV // PROFILE: FRESHER_IT
     </text>
 
     <!-- Dividing accent line -->
@@ -137,7 +137,7 @@
     <!-- Column 1: TOTAL CONTRIBUTIONS -->
     <g transform="translate(0, 36)">
       <text id="stat-total" x="64" y="32" class="font-mono" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">
-        3+
+        429+
       </text>
       <text x="64" y="52" class="font-mono" font-size="8" font-weight="700" fill="#4facfe" text-anchor="middle" letter-spacing="0.5">
         TOTAL
@@ -160,7 +160,7 @@
 
       <!-- Streak Number -->
       <text id="stat-current" x="0" y="31" class="font-mono" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">
-        2
+        1
       </text>
 
       <!-- Label -->
@@ -175,7 +175,7 @@
     <!-- Column 3: LONGEST STREAK -->
     <g transform="translate(258, 36)">
       <text id="stat-longest" x="64" y="32" class="font-mono" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">
-        2
+        33
       </text>
       <text x="64" y="52" class="font-mono" font-size="8" font-weight="700" fill="#4facfe" text-anchor="middle" letter-spacing="0.5">
         LONGEST
@@ -199,14 +199,14 @@
   <!-- Vertical Divider -->
   <line x1="422" y1="62" x2="422" y2="215" stroke="#1d283f" stroke-width="1" stroke-dasharray="3, 3" />
 
-  <!-- Right Panel: AI Vibecoding Engine and Production Mindset -->
+  <!-- Right Panel: AI-Assisted Workflow and Job Readiness -->
   <g transform="translate(446, 60)">
     <rect width="366" height="152" rx="8" fill="url(#actPanel)" stroke="#1e2c45" stroke-width="1" />
     <line x1="0" y1="0" x2="40" y2="0" stroke="#00f2fe" stroke-width="2.5" />
 
     <!-- Panel Title and Dynamic Equalizer Waves -->
     <text x="16" y="24" class="font-mono" font-size="10" font-weight="700" fill="#00f2fe" letter-spacing="1.5">
-      AI_VIBECODING_VELOCITY
+      AI_ASSISTED_WORKFLOW
     </text>
 
     <!-- Mini Equalizer bars indicating live development frequency -->
@@ -221,29 +221,29 @@
 
     <!-- Subtitle -->
     <text x="16" y="44" class="font-sans" font-size="11" font-weight="600" fill="#ffffff">
-      Building High-Velocity Solutions with AI Collaboration
+      Practical Software Building with Effective AI Usage
     </text>
 
-    <!-- 3 Telemetry Spec Lines -->
+    <!-- Telemetry Spec Lines -->
     <g transform="translate(16, 60)">
       <circle cx="3" cy="7" r="2" fill="#4facfe" />
       <text x="12" y="10" class="font-mono" font-size="8.5" fill="#a4b7d3">
-        WORKFLOW: <tspan fill="#00f2fe">AI-Augmented Architecture &amp; Rapid Iterations</tspan>
+        APPROACH: <tspan fill="#00f2fe">Problem Framing • AI Assistance • Verification</tspan>
       </text>
 
       <circle cx="3" cy="25" r="2" fill="#9b51e0" />
       <text x="12" y="28" class="font-mono" font-size="8.5" fill="#a4b7d3">
-        AI FOCUS: <tspan fill="#c3d4ee">pgvector Semantic Search • LLMs • RAG Patterns</tspan>
+        STRENGTH: <tspan fill="#c3d4ee">Fast Learning &amp; Prototyping Across Tech Stacks</tspan>
       </text>
 
       <circle cx="3" cy="43" r="2" fill="#ff416c" />
       <text x="12" y="46" class="font-mono" font-size="8.5" fill="#a4b7d3">
-        SHIPMENT: <tspan fill="#c3d4ee">Production-Ready APIs • Dockerized Deployments</tspan>
+        EXPOSURE: <tspan fill="#c3d4ee">Web (TS/React/Node) • Kotlin • SQL &amp; Docker</tspan>
       </text>
 
       <circle cx="3" cy="61" r="2" fill="#00f2fe" />
       <text x="12" y="64" class="font-mono" font-size="8.5" fill="#a4b7d3">
-        STATUS: <tspan fill="#00f2fe" font-weight="bold">READY FOR FULL-TIME ROLES &amp; IMPACT</tspan>
+        STATUS: <tspan fill="#00f2fe" font-weight="bold">OPEN TO FRESHER / JUNIOR SOFTWARE ROLES</tspan>
       </text>
     </g>
   </g>
@@ -252,10 +252,10 @@
   <g transform="translate(30, 236)">
     <circle cx="4" cy="4" r="2" fill="#00f2fe" />
     <text x="14" y="7" class="font-mono" font-size="8" fill="#586f91" letter-spacing="1">
-      TELEMETRY // CODE_CADENCE: ACTIVE // PIPELINE: GIT ➔ AI_ASSIST ➔ BUILD ➔ DEPLOY // CONTINUOUS_IMPROVEMENT
+      TELEMETRY // CODE_CADENCE: ACTIVE // PIPELINE: LEARN ➔ AI_ASSIST ➔ VERIFY ➔ BUILD // CONTINUOUS_GROWTH
     </text>
     <text x="780" y="7" class="font-mono" font-size="8" fill="#586f91" letter-spacing="1" text-anchor="end">
-      05rDev::ENGINEERING
+      05rDev::PROFILE
     </text>
   </g>
 </svg>

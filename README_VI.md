@@ -19,7 +19,7 @@
 
   <!-- Dynamic Typing Effect (Vietnamese) -->
   <a href="https://github.com/05rdev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&width=650&height=45&lines=%F0%9F%91%8B+Xin+ch%C3%A0o%2C+m%C3%ACnh+l%C3%A0+Hu%E1%BB%B3nh+V%C4%83n+%C4%90%E1%BB%8Bnh+(05rDev)!;%F0%9F%8E%93+T%E1%BB%91t+nghi%E1%BB%87p+Cao+%C4%91%E1%BA%B3ng+CNTT+(Fresh+IT+Graduate);%E2%9A%A1+AI+Vibecoding+Enthusiast+%E2%80%A2+X%C3%A2y+d%E1%BB%B1ng+c%C3%B9ng+AI;%F0%9F%9A%80+Full-Stack+Web+%26+Mobile+Android+(Kotlin)+Developer;%F0%9F%A7%A0+Kh%C3%A1m+ph%C3%A1+C%E1%BA%A5u+tr%C3%BAc+D%E1%BB%AF+li%E1%BB%87u%2C+Gi%E1%BA%A3i+thu%E1%BA%ADt+%26+AI+Systems" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3000&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&width=660&height=45&lines=Xin+ch%C3%A0o%2C+m%C3%ACnh+l%C3%A0+Hu%E1%BB%B3nh+V%C4%83n+%C4%90%E1%BB%8Bnh+(05rDev);T%E1%BB%91t+nghi%E1%BB%87p+Cao+%C4%91%E1%BA%B3ng+CNTT+%E2%80%A2+Fresher+Developer;Th%E1%BA%BF+m%E1%BA%A1nh%3A+%E1%BB%A8ng+d%E1%BB%A5ng+AI+hi%E1%BB%87u+qu%E1%BA%A3+v%C3%A0o+l%E1%BA%ADp+tr%C3%ACnh;N%E1%BB%81n+t%E1%BA%A3ng+c%C6%A1+b%E1%BA%A3n+%E2%80%A2+H%E1%BB%8Dc+nhanh+%26+th%C3%ADch+nghi+t%E1%BB%91t" alt="Typing SVG" />
   </a>
 
   <p align="center">
@@ -33,93 +33,60 @@
 
 ---
 
-### 🌌 Về bản thân tôi
+### 👤 Về bản thân tôi
 
 ```yaml
-thong_tin:
-  ho_va_ten: "Huỳnh Văn Định"
-  tai_khoan: "05rDev"
-  vai_tro: "Tốt nghiệp Cao đẳng Công nghệ Thông tin (Fresh IT Graduate)"
-  phong_cach: "⚡ AI Vibecoding Enthusiast — Tận dụng tối đa AI để biến ý tưởng thành sản phẩm"
-  chuyen_mon: "Full-Stack Web, Android (Kotlin) & AI Backend Systems"
-  triet_ly: "Tư duy hệ thống vững vàng, nắm bản chất cốt lõi và phát triển thần tốc cùng AI."
-  the_manh: ["AI Vibecoding", "TypeScript & Node.js Ecosystem", "Kotlin & Jetpack Compose", "PostgreSQL + pgvector (Semantic Search)", "Docker & Scalable APIs"]
+ho_so:
+  ho_va_ten: "Huỳnh Văn Định (05rDev)"
+  hoc_van: "Tốt nghiệp Cao đẳng Công nghệ Thông tin"
+  muc_tieu: "Fresher / Junior Software Developer"
+  nen_tang: "Kiến thức CNTT cơ bản, linh hoạt đa công nghệ (không cố định 1 ngôn ngữ)"
+  the_manh: "Ứng dụng AI hiệu quả để tìm hiểu, triển khai, debug & hoàn thiện sản phẩm"
+  trang_thai: "Sẵn sàng làm việc toàn thời gian & học hỏi quy trình thực tế"
 ```
 
-- 🎓 **Học vấn:** Tốt nghiệp chuyên ngành **Công nghệ Thông tin** (hệ Cao đẳng), vững nền tảng thực hành, tràn đầy nhiệt huyết và sẵn sàng cho môi trường làm việc thực chiến.
-- ⚡ **Phong cách làm việc:** **AI Vibecoding Enthusiast** — Làm chủ quy trình phát triển sản phẩm hiện đại cùng AI, tăng tốc x5 - x10 lần từ khâu thiết kế kiến trúc, viết code, tối ưu giải thuật cho tới triển khai.
-- 🔭 **Thế mạnh kỹ thuật:** Phát triển ứng dụng Web Full-Stack (React/Next.js + Node.js/NestJS/Laravel) & Mobile Android (Kotlin).
-- 🧠 **AI & Vector Search:** Tích hợp LLM (Gemini, Ollama, Groq), tìm kiếm ngữ nghĩa với `pgvector` & tối ưu hóa cơ sở dữ liệu.
-- 🗄️ **Cơ sở dữ liệu & Caching:** Tối ưu truy vấn với PostgreSQL, SQL Server, MySQL, MongoDB và đệm dữ liệu siêu tốc bằng Redis.
-- 💬 **Thảo luận với tôi về:** AI Vibecoding, TypeScript, Kotlin, Kiến trúc Backend, AI Embedding/Search, Linux & Docker.
-- 📫 **Liên hệ:** Bạn có thể tạo issue hoặc kết nối nhanh qua các nền tảng mạng xã hội bên trên!
+- 🎓 **Học vấn & Định hướng:** Tốt nghiệp Cao đẳng ngành **Công nghệ Thông tin** với nền tảng lập trình và cơ sở dữ liệu ở mức cơ bản; đang tìm kiếm cơ hội ở vị trí **Fresher / Junior Developer** để rèn luyện chuyên môn qua các dự án thực tế.
+- 🤖 **Thế mạnh ứng dụng AI:** Điểm mạnh lớn nhất của mình là khai thác các công cụ AI một cách bài bản — biết cách chia nhỏ bài toán, mô tả ngữ cảnh rõ ràng, dùng AI để tra cứu tài liệu, dựng khung tính năng, đọc hiểu code, tìm nguyên nhân lỗi và ghép nối thành sản phẩm hoàn chỉnh.
+- 🧩 **Linh hoạt về công nghệ:** Vì phần lớn công việc được triển khai cùng sự hỗ trợ của AI thay vì chuyên sâu cố định một ngôn ngữ, mình có thể làm quen nhanh với tech stack sẵn có của đội ngũ khi cần.
+- 🤝 **Thái độ làm việc:** Thẳng thắn nhìn nhận giới hạn kiến thức nền tảng hiện tại, luôn chủ động kiểm tra lại kết quả do AI gợi ý, chú trọng khả năng chạy ổn định và sẵn sàng tiếp thu góp ý từ mentor/senior.
+- 📫 **Liên hệ tuyển dụng:** Mời anh/chị kết nối qua Email hoặc Telegram bên trên nếu đội ngũ đang cần một ứng viên cầu tiến, trung thực và biết tận dụng AI để tăng tốc độ tiếp cận công việc.
 
 ---
 
-### 🛠️ Kỹ năng & Công nghệ tiêu biểu (Tech Stack)
+### 🛠️ Ngôn ngữ, Framework & Công cụ đã từng dùng
 
-<div align="center">
+> *Đây là các ngôn ngữ, framework và công cụ mình từng tiếp xúc trong quá trình học tập và làm dự án cá nhân (đa số có sự hỗ trợ của AI), không phải danh sách kỹ năng thành thạo chuyên sâu.*
 
-  #### 💻 Ngôn ngữ lập trình chính
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=ts,js,kotlin,java,rust,python&theme=dark" alt="Languages" />
-    </a>
-  </p>
-
-  #### 🌐 Frontend & Mobile (Di động)
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,androidstudio&theme=dark" alt="Frontend & Mobile" />
-    </a>
-  </p>
-
-  #### ⚙️ Backend, Frameworks & ORM
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,laravel,prisma&theme=dark" alt="Backend & Frameworks" />
-    </a>
-  </p>
-
-  #### 🗄️ Cơ sở dữ liệu & Caching
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis&theme=dark" alt="Databases" />
-    </a>
-  </p>
-
-  #### 🐳 DevOps, Hệ điều hành & Công cụ
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,postman,vscode&theme=dark" alt="DevOps & Tools" />
-    </a>
-  </p>
-
-</div>
+| Nhóm | Công nghệ & Công cụ |
+| :--- | :--- |
+| **🤖 Công cụ AI** | ![Claude](https://img.shields.io/badge/-Claude-152136?style=flat-square&logo=claude&logoColor=D97757) ![Gemini](https://img.shields.io/badge/-Gemini-152136?style=flat-square&logo=googlegemini&logoColor=4facfe) ![Cursor](https://img.shields.io/badge/-Cursor-152136?style=flat-square&logo=cursor&logoColor=white) ![GitHub Copilot](https://img.shields.io/badge/-GitHub%20Copilot-152136?style=flat-square&logo=githubcopilot&logoColor=00f2fe) ![Codex](https://img.shields.io/badge/-Codex-152136?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTBBMzdGIiBzdHJva2Utd2lkdGg9IjIuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cG9seWxpbmUgcG9pbnRzPSI1IDE3IDEwIDEyIDUgNyIvPjxsaW5lIHgxPSIxMiIgeTE9IjE3IiB4Mj0iMTkiIHkyPSIxNyIvPjwvc3ZnPg==) ![Antigravity](https://img.shields.io/badge/-Antigravity-152136?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRmYWNmZSI+PHBhdGggZD0iTTEyIDIuNUwzLjUgMjAuNWgzLjhsMi00LjVoNS40bDIgNC41aDMuOEwxMiAyLjV6bS0xLjQgMTAuMkwxMiA5LjRsMS40IDMuM2gtMi44eiIvPjwvc3ZnPg==) ![Ollama](https://img.shields.io/badge/-Ollama-152136?style=flat-square&logo=ollama&logoColor=white) |
+| **💻 Ngôn ngữ** | ![TypeScript](https://img.shields.io/badge/-TypeScript-152136?style=flat-square&logo=typescript&logoColor=3178C6) ![JavaScript](https://img.shields.io/badge/-JavaScript-152136?style=flat-square&logo=javascript&logoColor=F7DF1E) ![Kotlin](https://img.shields.io/badge/-Kotlin-152136?style=flat-square&logo=kotlin&logoColor=7F52FF) ![Python](https://img.shields.io/badge/-Python-152136?style=flat-square&logo=python&logoColor=3776AB) ![Rust](https://img.shields.io/badge/-Rust-152136?style=flat-square&logo=rust&logoColor=DEA584) ![PHP](https://img.shields.io/badge/-PHP-152136?style=flat-square&logo=php&logoColor=8892BF) |
+| **🌐 Web & Mobile** | ![React](https://img.shields.io/badge/-React-152136?style=flat-square&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/-Next.js-152136?style=flat-square&logo=nextdotjs&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-152136?style=flat-square&logo=tailwindcss&logoColor=06B6D4) ![Node.js](https://img.shields.io/badge/-Node.js-152136?style=flat-square&logo=nodedotjs&logoColor=5FA04E) ![Laravel](https://img.shields.io/badge/-Laravel-152136?style=flat-square&logo=laravel&logoColor=FF2D20) ![Android Studio](https://img.shields.io/badge/-Android%20Studio-152136?style=flat-square&logo=androidstudio&logoColor=3DDC84) |
+| **🗄️ CSDL & Công cụ** | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-152136?style=flat-square&logo=postgresql&logoColor=4169E1) ![MySQL](https://img.shields.io/badge/-MySQL-152136?style=flat-square&logo=mysql&logoColor=4479A1) ![Redis](https://img.shields.io/badge/-Redis-152136?style=flat-square&logo=redis&logoColor=FF4438) ![Docker](https://img.shields.io/badge/-Docker-152136?style=flat-square&logo=docker&logoColor=2496ED) ![Git](https://img.shields.io/badge/-Git-152136?style=flat-square&logo=git&logoColor=F05032) ![Postman](https://img.shields.io/badge/-Postman-152136?style=flat-square&logo=postman&logoColor=FF6C37) |
 
 ---
 
-### 📊 Chỉ số Hoạt động & Hệ thống Kỹ thuật (Activity & System Telemetry)
+### 📊 Hoạt động GitHub & Quy trình Làm việc
 
 <div align="center">
 
   <a href="https://github.com/05rdev">
-    <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/activity.svg" alt="05rDev Activity & System Metrics" width="100%" />
+    <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/activity.svg" alt="05rDev GitHub Activity & Workflow" width="100%" />
   </a>
 
 </div>
 
 ---
 
-### ⚡ Ma trận Lượng tử Đóng góp Mã nguồn (Quantum Neural Matrix)
+### ⚡ Biểu đồ Đóng góp 365 ngày
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/neural-matrix.svg" alt="05rDev Quantum Neural Contribution Matrix" width="100%" />
-  <p><i>⚡ Ma trận nơ-ron đóng góp 365 ngày &amp; Nhịp đập kỹ thuật Cardiogram (Tự động cập nhật qua GitHub Actions).</i></p>
+  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/neural-matrix.svg" alt="05rDev 365-Day Contribution Matrix" width="100%" />
+  <p><i>Biểu đồ tần suất đóng góp mã nguồn trong 365 ngày gần nhất (tự động cập nhật qua GitHub Actions).</i></p>
 </div>
 
 ---
 
 <div align="center">
-  <sub>Được thiết kế với 💜 bởi <a href="https://github.com/05rdev"><b>05rDev</b></a> • Không ngừng học hỏi và sáng tạo!</sub>
+  <sub><a href="https://github.com/05rdev"><b>05rDev</b></a> • Không ngừng học hỏi, làm việc nghiêm túc và cải thiện mỗi ngày.</sub>
 </div>

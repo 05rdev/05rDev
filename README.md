@@ -19,7 +19,7 @@
 
   <!-- Dynamic Typing Effect (English) -->
   <a href="https://github.com/05rdev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&width=650&height=45&lines=%F0%9F%91%8B+Hi+there%2C+I'm+Huynh+Van+Dinh+(05rDev)!;%F0%9F%8E%93+IT+College+Graduate+%E2%80%A2+Hands-on+Software+Builder;%E2%9A%A1+AI+Vibecoding+Enthusiast+%E2%80%A2+Building+fast+with+AI;%F0%9F%9A%80+Full-Stack+Web+%26+Mobile+Android+(Kotlin)+Developer;%F0%9F%A7%A0+Exploring+DSA%2C+Backend+Architecture+%26+AI+Systems" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3000&pause=1000&color=00F2FE&center=true&vCenter=true&multiline=false&width=660&height=45&lines=Hi%2C+I'm+Huynh+Van+Dinh+(05rDev);IT+College+Graduate+%E2%80%A2+Fresher+Developer;Strength%3A+Effective+AI-Assisted+Development;Core+Fundamentals+%E2%80%A2+Fast+Learner+%26+Adaptable" alt="Typing SVG" />
   </a>
 
   <p align="center">
@@ -33,93 +33,60 @@
 
 ---
 
-### 🌌 About Me
+### 👤 About Me
 
 ```yaml
-identity:
-  full_name: "Huynh Van Dinh"
-  handle: "05rDev"
-  status: "Fresh IT Graduate (Associate Degree in Information Technology)"
-  style: "⚡ AI Vibecoding Enthusiast — Supercharging dev workflows with modern AI"
-  specialization: "Full-Stack Web, Android (Kotlin) & AI Backend Systems"
-  core_philosophy: "Solid engineering foundations, sharp product intuition, and rapid building."
-  core_strengths: ["AI Vibecoding", "TypeScript & Node.js Ecosystem", "Kotlin & Jetpack Compose", "PostgreSQL + pgvector (Semantic Search)", "Docker & Scalable APIs"]
+profile:
+  full_name: "Huynh Van Dinh (05rDev)"
+  education: "Associate Degree in Information Technology"
+  target_role: "Fresher / Junior Software Developer"
+  foundation: "Core IT fundamentals; adaptable across stacks rather than specialized in one language"
+  key_strength: "Effective AI-assisted workflow — research, prototyping, debugging & delivery"
+  availability: "Open to full-time opportunities"
 ```
 
-- 🎓 **Education:** Graduated with a College Degree in **Information Technology**, with a solid hands-on background and eager to contribute to production software.
-- ⚡ **Workflow & Mindset:** **AI Vibecoding Enthusiast** — Leveraging state-of-the-art AI tooling to accelerate development x5 - x10, from architecture design and rapid prototyping to algorithmic optimization and deployment.
-- 🔭 **Core Technical Strengths:** Full-Stack Web Applications (React/Next.js + Node.js/NestJS/Laravel) & Mobile Android (Kotlin).
-- 🧠 **AI & Vector Search:** Integrating LLMs (Gemini, Ollama, Groq), semantic vector search with `pgvector` & database query optimization.
-- 🗄️ **Databases & Caching:** Proficient with PostgreSQL, MS SQL Server, MySQL, MongoDB, and high-throughput caching with Redis.
-- 💬 **Ask Me About:** AI Vibecoding, TypeScript, Kotlin, Backend Architecture, AI Embeddings/Search, Linux & Docker.
-- 📫 **Reach Me:** Feel free to open an issue or connect via the social links above!
+- 🎓 **Background & Goal:** IT College graduate with foundational knowledge of programming, databases, and software development; seeking a **Fresher / Junior Developer** position to grow through real-world production projects.
+- 🤖 **AI-Assisted Productivity:** My main strength is using modern AI tools systematically and effectively — breaking down requirements, providing clear context, researching unfamiliar tools quickly, drafting boilerplate, debugging issues, and assembling working features.
+- 🧩 **Stack Flexibility:** Because I rely heavily on AI rather than specializing deeply in a single language, I am comfortable picking up and adapting to whatever tech stack a team already uses.
+- 🤝 **Work Ethic:** Honest about my current technical depth, careful to review and test AI-generated code rather than trusting it blindly, and eager to learn engineering standards from mentors and teammates.
+- 📫 **Contact:** Feel free to reach out via Email or Telegram above if your team is looking for a transparent, fast-learning junior contributor.
 
 ---
 
-### 🛠️ Featured Tech Stack & Arsenal
+### 🛠️ Languages, Frameworks & Tools Worked With
 
-<div align="center">
+> *Technologies and tools I have used in coursework and personal projects (mostly with AI assistance), listed as prior exposure rather than deep mastery.*
 
-  #### 💻 Core Programming Languages
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=ts,js,kotlin,java,rust,python&theme=dark" alt="Languages" />
-    </a>
-  </p>
-
-  #### 🌐 Frontend & Mobile Development
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,androidstudio&theme=dark" alt="Frontend & Mobile" />
-    </a>
-  </p>
-
-  #### ⚙️ Backend, Frameworks & ORM
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,laravel,prisma&theme=dark" alt="Backend & Frameworks" />
-    </a>
-  </p>
-
-  #### 🗄️ Databases & Caching
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb,redis&theme=dark" alt="Databases" />
-    </a>
-  </p>
-
-  #### 🐳 DevOps, OS & Developer Tools
-  <p>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=docker,nginx,linux,git,postman,vscode&theme=dark" alt="DevOps & Tools" />
-    </a>
-  </p>
-
-</div>
+| Category | Technologies & Tools |
+| :--- | :--- |
+| **🤖 AI Workflow** | ![Claude](https://img.shields.io/badge/-Claude-152136?style=flat-square&logo=claude&logoColor=D97757) ![Gemini](https://img.shields.io/badge/-Gemini-152136?style=flat-square&logo=googlegemini&logoColor=4facfe) ![Cursor](https://img.shields.io/badge/-Cursor-152136?style=flat-square&logo=cursor&logoColor=white) ![GitHub Copilot](https://img.shields.io/badge/-GitHub%20Copilot-152136?style=flat-square&logo=githubcopilot&logoColor=00f2fe) ![Codex](https://img.shields.io/badge/-Codex-152136?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTBBMzdGIiBzdHJva2Utd2lkdGg9IjIuNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cG9seWxpbmUgcG9pbnRzPSI1IDE3IDEwIDEyIDUgNyIvPjxsaW5lIHgxPSIxMiIgeTE9IjE3IiB4Mj0iMTkiIHkyPSIxNyIvPjwvc3ZnPg==) ![Antigravity](https://img.shields.io/badge/-Antigravity-152136?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRmYWNmZSI+PHBhdGggZD0iTTEyIDIuNUwzLjUgMjAuNWgzLjhsMi00LjVoNS40bDIgNC41aDMuOEwxMiAyLjV6bS0xLjQgMTAuMkwxMiA5LjRsMS40IDMuM2gtMi44eiIvPjwvc3ZnPg==) ![Ollama](https://img.shields.io/badge/-Ollama-152136?style=flat-square&logo=ollama&logoColor=white) |
+| **💻 Languages** | ![TypeScript](https://img.shields.io/badge/-TypeScript-152136?style=flat-square&logo=typescript&logoColor=3178C6) ![JavaScript](https://img.shields.io/badge/-JavaScript-152136?style=flat-square&logo=javascript&logoColor=F7DF1E) ![Kotlin](https://img.shields.io/badge/-Kotlin-152136?style=flat-square&logo=kotlin&logoColor=7F52FF) ![Python](https://img.shields.io/badge/-Python-152136?style=flat-square&logo=python&logoColor=3776AB) ![Rust](https://img.shields.io/badge/-Rust-152136?style=flat-square&logo=rust&logoColor=DEA584) ![PHP](https://img.shields.io/badge/-PHP-152136?style=flat-square&logo=php&logoColor=8892BF) |
+| **🌐 Web & Mobile** | ![React](https://img.shields.io/badge/-React-152136?style=flat-square&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/-Next.js-152136?style=flat-square&logo=nextdotjs&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-152136?style=flat-square&logo=tailwindcss&logoColor=06B6D4) ![Node.js](https://img.shields.io/badge/-Node.js-152136?style=flat-square&logo=nodedotjs&logoColor=5FA04E) ![Laravel](https://img.shields.io/badge/-Laravel-152136?style=flat-square&logo=laravel&logoColor=FF2D20) ![Android Studio](https://img.shields.io/badge/-Android%20Studio-152136?style=flat-square&logo=androidstudio&logoColor=3DDC84) |
+| **🗄️ DB & Tools** | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-152136?style=flat-square&logo=postgresql&logoColor=4169E1) ![MySQL](https://img.shields.io/badge/-MySQL-152136?style=flat-square&logo=mysql&logoColor=4479A1) ![Redis](https://img.shields.io/badge/-Redis-152136?style=flat-square&logo=redis&logoColor=FF4438) ![Docker](https://img.shields.io/badge/-Docker-152136?style=flat-square&logo=docker&logoColor=2496ED) ![Git](https://img.shields.io/badge/-Git-152136?style=flat-square&logo=git&logoColor=F05032) ![Postman](https://img.shields.io/badge/-Postman-152136?style=flat-square&logo=postman&logoColor=FF6C37) |
 
 ---
 
-### 📊 Engineering Activity & System Telemetry
+### 📊 GitHub Activity & Workflow
 
 <div align="center">
 
   <a href="https://github.com/05rdev">
-    <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/activity.svg" alt="05rDev Activity & System Metrics" width="100%" />
+    <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/activity.svg" alt="05rDev GitHub Activity & Workflow" width="100%" />
   </a>
 
 </div>
 
 ---
 
-### ⚡ Quantum Neural Contribution Matrix
+### ⚡ 365-Day Contribution Matrix
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/neural-matrix.svg" alt="05rDev Quantum Neural Contribution Matrix" width="100%" />
-  <p><i>⚡ 365-Day Neural Telemetry Matrix &amp; Activity Cardiogram (Scanned in real-time via GitHub Actions).</i></p>
+  <img src="https://raw.githubusercontent.com/05rdev/05rDev/output/neural-matrix.svg" alt="05rDev 365-Day Contribution Matrix" width="100%" />
+  <p><i>365-day contribution frequency and activity waveform (updated automatically via GitHub Actions).</i></p>
 </div>
 
 ---
 
 <div align="center">
-  <sub>Designed with 💜 by <a href="https://github.com/05rdev"><b>05rDev</b></a> • Stay curious and keep coding!</sub>
+  <sub><a href="https://github.com/05rdev"><b>05rDev</b></a> • Focused on continuous learning and practical building.</sub>
 </div>
